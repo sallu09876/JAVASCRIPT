@@ -1,0 +1,5 @@
+syntax :- 
+
+function name (...)
+
+Rest Parameters allows a function to accept infinite number of arguments as an array
