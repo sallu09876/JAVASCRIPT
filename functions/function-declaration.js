@@ -8,8 +8,8 @@
 */
 
 //key features 
-// 1. this is hoisted.
-// 2. named functions.
+// 1. this is hoisted. hoisting means we can call the function before its declaration.
+// 2. named functions. named functions can be called before they are defined.
 function greet(name) {  //parameter (we don't know the name)
     console.log(`Hello ` + name + ` !`);
     
