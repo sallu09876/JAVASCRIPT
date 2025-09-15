@@ -1,0 +1,1 @@
+destructuring assignment is a js feature that allows you to unpack values from arrays or properties from object in to seperate variables
