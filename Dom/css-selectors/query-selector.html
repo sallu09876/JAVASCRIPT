@@ -1,0 +1,25 @@
+<!-- returns the first element that matches a specified css selector(s) in the document. if no matches are found, it returns null.
+this method is used to find and interact with the html element on a web page using css selector syntax. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <script>
+        // select the first element with class "box"
+        let firstBox = document.querySelector(".box");
+        console.log(firstBox); // logs the first div with class "box"
+
+        // change the text content of the selected element
+        firstBox.textContent = "This is the first box";
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- get elements by tag name is a js method used to select all html elements with a specific tag name. it returns a live html collection of elements with the specified tag name. if no elements with the specified tag name exists, it returns an empty collection. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>paragraph</p>
+    <p>paragraph</p>
+    <p>paragraph</p>
+    <h4>Heading</h4>
+
+    <script>
+        // select all <p> elements
+        let paragraph = document.getElementsByTagName("p");
+        console.log(paragraph); // logs the html collection of <p> elements
+
+        for (let i = 0; i < paragraph.length; i++) {
+            paragraph[i].style.color = 'green'; // change the color of each <p> element to green
+        }
+    </script>
+</body>
+</html>

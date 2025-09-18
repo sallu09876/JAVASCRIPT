@@ -1,0 +1,26 @@
+<!-- select all elements that match the specified CSS selector(s) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <script>
+        // select all elements with class "box"
+        let boxes = document.querySelectorAll(".box");
+        console.log(boxes); // logs a NodeList of all divs with class "box"
+
+        // change the text content of each selected element
+        boxes.forEach((box, index) => {
+            console.log(`${index + 1}: ${box.textContent}`);
+        }); // log the text content of each box
+    </script>
+</body>
+</html>

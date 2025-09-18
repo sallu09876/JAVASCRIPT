@@ -1,0 +1,22 @@
+<!-- get element by id is a js method used to select an html element based on its id attribute. it returns the element that has the id attribute with the specified value. if no elements with the specified id exists, it returns null. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myHeader">Hello World</h1>
+    <button onclick="changeheading()">Change heading</button>
+    <script>
+        function changeheading() {
+            // select the element with id "myHeader"
+            var heading = document.getElementById("myHeader");
+            // change the text content of the selected element
+            heading.textContent = "Hello JavaScript";
+        }
+    </script>
+</body>
+</html>

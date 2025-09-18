@@ -1,0 +1,26 @@
+<!-- get element by name is a js method used to select an html element based on its name attribute. it returns a collection of elements that have the name attribute with the specified value. if no elements with the specified name exists, it returns an empty collection. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+    </form>
+
+    <script>
+        // select all elements with name "gender"
+        let radios = document.getElementsByName("gender");
+        console.log(radios.length); // logs the number of radio buttons with name "gender"
+
+        radios.forEach(radio => {
+            console.log(radio.value); // logs the value of each radio button
+        });
+    </script>
+</body>
+</html>
