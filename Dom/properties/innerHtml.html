@@ -1,0 +1,18 @@
+<!-- // innerHTML property is used to get or set the HTML content inside an element. It returns a string that represents the HTML markup contained within the element, including any nested elements and their attributes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Hello <span style="display: none;">World</span></p>
+
+    <script>
+        let para = document.getElementById("para");
+        console.log(para.innerHTML); // Output: "Hello <span style="display: none;">World</span>"
+    </script>
+</body>
+</html>

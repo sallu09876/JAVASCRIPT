@@ -1,0 +1,21 @@
+<!-- // it returns the "inner" text content of an element (excluding the text of its child elements)
+// it excludes hidden text (text within elements styled with display: none or visibility: hidden)
+// it normalizes whitespace (multiple spaces are treated as a single space, and line breaks are removed) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Hello <span style="display: none;">World</span></p>
+
+    <script>
+        let para = document.getElementById("para");
+        console.log(para.innerText); // Output: "Hello"
+    </script>
+    
+</body>
+</html>

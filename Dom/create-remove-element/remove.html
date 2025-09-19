@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Remove Example</h2>
+    <div id="removeExample">
+      <p>Thi s is an example of removing an element from the DOM.</p>
+    </div>
+    <button onclick="removeElement()">Remove Element</button>
+
+    <script>
+      function removeElement() {
+        let element = document.getElementById("removeExample");
+        element.remove();
+      }
+    </script>
+  </body>
+</html>

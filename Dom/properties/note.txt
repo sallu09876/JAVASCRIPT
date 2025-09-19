@@ -1,0 +1,1 @@
+text content, inner text, inner html are properties used to access or change the content inside an element 

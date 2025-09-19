@@ -1,0 +1,20 @@
+<!-- // it returns all the text content of an element (including the text of its child elements)
+// it includes hidden text (text within elements styled with display: none or visibility: hidden)
+// it preserves whitespace and line breaks as they appear in the HTML source -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Hello <span style="display: none;">World</span></p>
+
+    <script>
+        let para = document.getElementById("para");
+        console.log(para.textContent); // Output: "Hello World"
+    </script>
+</body>
+</html>
