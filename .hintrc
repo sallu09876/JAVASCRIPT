@@ -11,6 +11,7 @@
       }
     ],
     "no-inline-styles": "off",
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "button-type": "off"
   }
 }
