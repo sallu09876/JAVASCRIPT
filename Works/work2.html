@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    }
+    .form-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 25px;
+      color: #001f80;
+    }
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      outline: none;
+      font-size: 14px;
+    }
+    .input-group input:focus {
+      border-color: #0072ff;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 4px;
+      display: none;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .btn {
+      width: 48%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-signup {
+      background: linear-gradient(to right, #0000ff, #00c6ff);
+      color: #fff;
+    }
+    .btn-signin {
+      background: #f1f1f1;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Name" required>
+        <div class="error" id="nameError">Please enter a valid name (letters only).</div>
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="E-mail" required>
+        <div class="error" id="emailError">Please enter a valid email.</div>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" required minlength="6">
+        <div class="error" id="passwordError">Password must be at least 6 characters long.</div>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="btn btn-signup">SIGN UP</button>
+        <button type="button" class="btn btn-signin">SIGN IN</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page refresh
+      
+      let isValid = true;
+
+      // Get field values
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Error elements
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+
+      // Reset error messages
+      nameError.style.display = "none";
+      emailError.style.display = "none";
+      passwordError.style.display = "none";
+
+      // Name validation
+      if (!/^[A-Za-z\s]+$/.test(name)) {
+        nameError.style.display = "block";
+        isValid = false;
+      }
+
+      // Email validation
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        emailError.style.display = "block";
+        isValid = false;
+      }
+
+      // Password validation
+      if (password.length < 6) {
+        passwordError.style.display = "block";
+        isValid = false;
+      }
+
+      // If valid → show success popup
+      if (isValid) {
+        alert("Account created successfully!");
+        document.getElementById("signupForm").reset(); // clear form
+      }
+    });
+  </script>
+</body>
+</html>
