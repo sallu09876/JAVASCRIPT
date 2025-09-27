@@ -1,0 +1,18 @@
+<!-- Online Event is triggered when the user comes back online -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h2>Online Event</h2>
+    <p>Try going offline and then back online to see the online event in action.</p>
+    <script>
+        window.addEventListener("online", function (event) {
+            console.log("You are back online!");
+        });
+    </script>
+ </body>
+ </html>

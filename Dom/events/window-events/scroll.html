@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px; /* Make the body tall enough to allow scrolling */
+        }
+    </style>
+</head>
+<body>
+    <h2>Scroll Event Example</h2>
+    <p>Try scrolling this page to see the scroll event in action.</p>
+    <script>
+        window.addEventListener("scroll", () => {
+            console.log("Window scrolled to: " + window.scrollX + "x" + window.scrollY);
+        });
+    </script>
+</body>
+</html>

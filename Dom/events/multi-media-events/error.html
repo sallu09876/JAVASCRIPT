@@ -1,0 +1,18 @@
+<!-- Error Event is triggered when an error occurs in the window -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h2>Error Event</h2>
+    <p>Try causing an error in the console to see the error event in action.</p>
+    <script>
+        window.addEventListener("error", function (event) {
+            console.error("Error occurred:", event.message);
+        });
+    </script>
+ </body>
+ </html>

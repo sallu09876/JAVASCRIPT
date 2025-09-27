@@ -1,0 +1,25 @@
+<!-- Can Play Event is triggered when the media element is ready to start playing -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h2>Can Play Event</h2>
+    <p>Try loading a media element to see the canplay event in action.</p>
+    <script>
+        const video = document.createElement("video");
+        video.src = "./video.mp4";
+        video.width = 350;
+        video.height = 340;
+        video.controls = true;
+        document.body.appendChild(video);
+
+        video.addEventListener("canplay", function (event) {
+            console.log("Media is ready to play.");
+        });
+    </script>
+ </body>
+ </html>

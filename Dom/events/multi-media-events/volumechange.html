@@ -1,0 +1,31 @@
+<!-- Volume Change Event is triggered when the volume of a media element changes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Volume Change Event</h2>
+  <p>Try changing the volume of a media element to see the volumechange event in action.</p>
+  <script>
+    const video = document.createElement("video");
+    video.width = 350;
+    video.height = 340;
+    video.controls = true;
+
+    const source = document.createElement("source");
+    source.src = "./video1.mp4";
+    source.type = "video/mp4";
+
+    video.appendChild(source);
+    document.body.appendChild(video);
+
+    video.addEventListener("volumechange", function (event) {
+      console.log("Volume changed:", video.volume);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Time Update Event</h2>
+
+    <audio id="audioplayer" controls>
+      <source src="./audio1.mp3" type="audio/mpeg" />
+    </audio>
+
+    <p id="eventOutput">Event will appear here</p>
+
+    <script>
+      const audio = document.getElementById("audioplayer");
+      const output = document.getElementById("eventOutput");
+
+      //timeupdate event
+      audio.addEventListener("timeupdate", () => {
+        output.textContent = "Current time: " + audio.currentTime.toFixed(2) + " seconds";
+        console.log("Current time: " + audio.currentTime.toFixed(2) + " seconds");
+      });
+    </script>
+</body>
+</html>

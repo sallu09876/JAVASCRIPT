@@ -1,0 +1,25 @@
+<!-- Seeked Event is triggered when a seek operation completes in a media element (like video or audio). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Seeked Event</h2>
+    <p>Try seeking within a media element to see the seeked event in action.</p>
+    <script>
+      const video = document.createElement("video");
+      video.src = "../video1.mp4";
+      video.width = 350;  
+      video.height = 340;
+      video.controls = true;
+      document.body.appendChild(video);
+
+      video.addEventListener("seeked", function (event) {
+        console.log("Seek operation completed.");
+      });
+    </script>
+  </body>
+</html>

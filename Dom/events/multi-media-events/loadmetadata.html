@@ -1,0 +1,26 @@
+<!-- Load Metadata Event is triggered when the metadata of a media element is loaded -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Load Metadata Event</h2>
+    <p>Try loading a media element to see the loadmetadata event in action.</p>
+    <script>
+        const video = document.createElement("video");
+        video.src = "./video1.mp4";
+        video.width = 350;
+        video.height = 340;
+        video.controls = true;
+        document.body.appendChild(video);
+
+        video.addEventListener("loadedmetadata", function (event) {
+            console.log("Metadata loaded:", video.duration);
+        });
+    </script>
+</body>
+</html>
