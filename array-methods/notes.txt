@@ -1,0 +1,32 @@
+||Accessor Methods (don’t change the original array)
+
+includes() → Checks if an item exists in the array (true/false).
+
+indexOf() → Gives the position of the first matching item.
+
+lastIndexOf() → Gives the position of the last matching item.
+
+slice() → Copies part of the array into a new array.
+
+join() → Combines all items into a string.
+
+toString() → Converts the array into a string.
+
+||Mutator Methods (change the original array)
+
+push() → Adds item(s) to the end of the array.
+
+pop() → Removes the last item.
+
+shift() → Removes the first item.
+
+unshift() → Adds item(s) to the front of the array.
+
+splice() → Adds/removes/replaces items at a specific position.
+
+sort() → Sorts the array items.
+
+reverse() → Reverses the order of items.
+
+👉 Accessor = “just look, don’t touch.”
+👉 Mutator = “actually change the array.”

@@ -1,0 +1,18 @@
+Array iteration methods are built-in functions in JavaScript that let you go through (loop over) each element of an array and do something with it, like checking, changing, or collecting values.
+👉 Example: forEach, map, filter, reduce, some, every.
+
+forEach → Runs a function once for every item in the array.
+
+map → Creates a new array by changing each item in the original.
+
+filter → Creates a new array with items that pass a condition.
+
+reduce → Reduces the array to a single value (like sum or product).
+
+some → Checks if at least one item matches a condition (true/false).
+
+every → Checks if all items match a condition (true/false).
+
+find → Returns the first item that matches a condition.
+
+findIndex → Returns the index of the first item that matches.

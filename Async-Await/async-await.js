@@ -21,9 +21,9 @@ async function getData() {
     
 }
 
-getData();
+getData(); // calling the async fn.
 
 // here, fetchData() is declared. then, we create a async fn getData(). then we log start. 
 // then it runs the fetchData (), then it runs the end log.
-
-// make one arrow fn example.
+// but, since fetchData() takes 2s to resolve, it waits there for 2s.
+// after 2s, it resolves the promise, and then the result is logged.
